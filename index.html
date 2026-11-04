@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Test Page</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117; /* GitHub Dark Theme */
+            color: #c9d1d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            padding: 40px;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            background-color: #161b22;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        h1 {
+            color: #58a6ff;
+        }
+        p {
+            font-size: 18px;
+        }
+        .status {
+            color: #3fb950;
+            font-weight: bold;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 સફળતા! (Success!)</h1>
+        <p>જો તમે આ પેજ જોઈ શકો છો, તો તેનો અર્થ એ છે કે <b>GitHub Pages બરાબર કામ કરી રહ્યું છે!</b></p>
+        
+        <p class="status" id="status-text">ચેક કરી રહ્યા છીએ...</p>
+        
+        <p style="font-size: 14px; color: #8b949e; margin-top: 30px;">
+            Deployed on: <span id="date"></span>
+        </p>
+    </div>
+
+    <script>
+        // સફળતાનો મેસેજ બતાવવા માટે
+        setTimeout(() => {
+            document.getElementById('status-text').innerText = "✅ ડિપ્લોયમેન્ટ સફળ થયું છે!";
+        }, 1000);
+
+        // આજની તારીખ બતાવવા માટે
+        document.getElementById('date').innerText = new Date().toLocaleString();
+    </script>
+</body>
+</html>
